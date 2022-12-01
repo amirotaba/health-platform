@@ -1,0 +1,26 @@
+syntax="proto3";
+option go_package = "git.paygear.ir/giftino/account/internal/feature/account/delivery/grpc";
+
+service ServiceService {
+  rpc AddOneService(ServiceRequest) returns (ServiceReply) {}
+  rpc AddManyService(stream ServiceRequest) returns ( StreamServiceReply) {}
+}
+
+message ServiceRequest {
+  string Name = 1;
+  string Code = 2;
+  string Path = 3;
+  string Function = 4;
+  string Method = 5;
+  bool Active = 6;
+  string Description = 7;
+}
+
+message ServiceReply {
+  bool Inserted = 1;
+  string Message = 2;
+}
+
+message StreamServiceReply {
+  repeated ServiceReply resp = 1;
+}

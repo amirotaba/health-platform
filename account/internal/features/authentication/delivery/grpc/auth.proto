@@ -1,0 +1,27 @@
+syntax="proto3";
+option go_package = "git.paygear.ir/giftino/account/internal/account/proto/grpc";
+
+service AuthenticationService {
+  rpc Authentication(AuthenticationRequest) returns (AuthenticationReply) {}
+}
+
+message AuthenticationRequest {
+  string Token = 1;
+  string Secret = 2;
+  string Path = 3;
+  string Method = 4;
+}
+
+message AuthenticationReply {
+  int64   ID = 1;
+  string  UUID = 2;
+  string  FirstName = 3;
+  string  LastName = 4;
+  string  Email = 5;
+  int64   RoleID = 6;
+  string  RoleName = 7;
+  int64   TypeID = 8;
+  string  TypeName = 9;
+  bool    IsActive = 10;
+  bool    Access = 11;
+}

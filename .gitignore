@@ -1,0 +1,12 @@
+main.exe
+log
+log/*
+static/*
+files/*
+files
+
+.idea
+.vscode
+
+config.yaml
+.env

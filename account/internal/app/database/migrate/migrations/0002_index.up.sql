@@ -1,0 +1,2 @@
+-- CREATE INDEX permission_id_idx on permission(id);
+-- CREATE INDEX role_id_idx on role(id);

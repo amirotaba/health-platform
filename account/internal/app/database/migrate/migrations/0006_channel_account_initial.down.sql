@@ -1,0 +1,3 @@
+-- DROP TABLE IF NOT EXISTS entity_actions;
+DROP TABLE IF NOT EXISTS service;
+-- DROP TABLE IF NOT EXISTS actions;

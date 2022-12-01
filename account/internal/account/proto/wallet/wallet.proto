@@ -1,0 +1,34 @@
+syntax="proto3";
+option go_package = "git.paygear.ir/giftino/account/internal/account/proto/wallet";
+
+service WalletService {
+  rpc CreateWallet(WalletRequest) returns (WalletReply) {}
+  rpc GetWallet(GetWalletRequest) returns (WalletDetailsReply) {}
+}
+
+// The request message containing the Wallet ID.
+message WalletRequest {
+  string UserID  = 1;
+  int64  balance = 2;
+}
+
+// The request message containing the Wallet ID.
+message GetWalletRequest {
+  string UserID  = 1;
+  string WalletID = 2;
+}
+
+// The response message containing the wallet exist
+message WalletReply {
+  bool   Created = 1;
+  int32  StatusCode = 2;
+  string StatusName = 3;
+}
+
+// The response message containing the wallet exist
+message WalletDetailsReply {
+  string WalletID    = 1;
+  int64  Balance     = 2;
+  int32  WalletType  = 3;
+  int32  WalletState = 4;
+}

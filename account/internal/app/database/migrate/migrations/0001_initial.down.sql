@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS role_permission;
+DROP TABLE IF EXISTS sales_channel;
+DROP TABLE IF EXISTS account;
+DROP TABLE IF EXISTS role;
+DROP TABLE IF EXISTS membership;
+DROP TABLE IF EXISTS discount;
+DROP TABLE IF EXISTS account_type;
+DROP TABLE IF EXISTS permission;

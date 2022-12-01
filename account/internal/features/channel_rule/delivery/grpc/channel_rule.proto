@@ -1,0 +1,28 @@
+syntax="proto3";
+option go_package = "git.paygear.ir/giftino/account/internal/account/proto/grpc";
+
+service ChannelRuleService {
+  rpc GetChannelTags(ChannelsRuleRequest) returns (ChannelRuleReply) {}
+  rpc GetChannelTag(ChannelRuleRequest) returns (ChannelRule) {}
+}
+
+message ChannelsRuleRequest {
+  int64  ChannelID = 1;
+  int64  TagID = 2;
+}
+
+message ChannelRuleRequest {
+  int64  ChannelID = 1;
+  int64  TagID = 2;
+}
+
+message ChannelRuleReply{
+  repeated ChannelRule Rules= 1;
+}
+
+message ChannelRule {
+  int64 ChannelID = 1;
+  int64 TagID     = 2;
+  float Price     = 3;
+  bool  IsActive  = 4;
+}

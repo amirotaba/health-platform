@@ -1,0 +1,22 @@
+syntax="proto3";
+option go_package = "grpc.proto";
+// The greeting service definition.
+service TagService {
+  // Sends a greeting
+  rpc Exist (TagRequest) returns (TagReply) {}
+}
+
+// The request message containing the Tag ID.
+message TagRequest {
+  int64 ID = 1;
+}
+
+// The response message containing the tag exist
+message TagReply {
+  bool   Exist = 1;
+  bool   Status = 2;
+  string Name = 3;
+  int64  ID = 4;
+  string CategoryName = 5;
+  int64  CategoryID = 6;
+}

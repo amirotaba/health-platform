@@ -1,0 +1,19 @@
+syntax="proto3";
+option go_package = "git.paygear.ir/giftino/inventory/internal/inventory/proto/channel_rule";
+
+service ChannelService {
+  rpc GetChannel(ChannelRequest) returns (ChannelReply) {}
+}
+
+message ChannelRequest {
+  int64 ID = 1;
+}
+
+message ChannelReply {
+  int64   ID = 1;
+  string  UUID = 2;
+  string  Name = 3;
+  string  DisplayName = 4;
+  float   CurrentBalance = 5;
+  bool    IsActive = 6;
+}

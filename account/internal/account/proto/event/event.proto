@@ -1,0 +1,12 @@
+syntax="proto3";
+option go_package = "git.paygear.ir/giftino/account/internal/account/proto/event";
+
+enum EventType{
+  OrderInit = 0;
+  Pay = 1;
+  Verified = 2;
+  Rejected = 3;
+  WalletDeposit = 4;
+  WalletWithDraw = 5;
+  ChannelCharge = 6;
+}
